@@ -5,4 +5,7 @@ Exercise 2 :
 
 Solution :
 
+[https://github.com/Shekharrajak/stackroute_exercise2](https://github.com/Shekharrajak/stackroute_exercise2)
+
+Demo :
 [https://shekharrajak.github.io/stackroute_exercise2/](https://shekharrajak.github.io/stackroute_exercise2/)
