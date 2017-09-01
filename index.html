@@ -1,0 +1,301 @@
+﻿<!DOCTYPE html>
+<html>   
+	<head>
+	  <meta charset="UTF-8">  
+		<meta http-equiv="x-ua-compatible" content="ie=edge">    
+		<meta name="description" content="StackRoute HTML-CSS Excercise 2">              
+		<meta name="viewport" content="width=device-width, initial-scale=1">      
+		<title>Shekhar Prasad Rajak</title>     	
+		<!-- getting bootstrap -->
+		<link rel="stylesheet" href="css/960.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!-- using google font -->
+		<!-- changed -->
+		<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+		<!-- custom css -->
+		<style>
+
+		/* changed */
+		body {
+    			font-family: 'Lato';font-size: 18px;
+		}
+		h3{
+			text-align: center;
+			padding-bottom: 50px;
+		}
+		/* changed */
+		button{
+			dipslay: block;
+			width: 100px;
+			height: 40px;
+			background-color: #62a4f2;
+			paddding: 10px 10px 10px 10px;
+		}
+		header
+		{
+			background-color: white;
+			position: fixed;
+			width: 102%;
+			top: 0%;
+			left: -2%;
+			
+		}		
+		/* changed */
+		header#navbar ul {
+    			list-style: none;		
+		}
+ 		/* changed */
+		header#navbar ul li {
+    			float: left;
+			display:inline-block;
+			 margin: 0 1.5em;
+		}
+
+		/* changed  */
+		header#navbar ul li a:hover {
+    			color: #4b6d98 ;
+		}
+		/* changed */
+		header#navbar ul li a{
+			display: block;
+     			padding: 8px 0px 8px 0px;
+    			background-color: #FFFF;
+		}
+
+		/* author note : changed */
+		.cover{
+			height: 100%; /*640px;*/
+			width: 100%;
+			overflow: hidden;
+			background: url("img/cover.jpg") no-repeat center center fixed;
+			-webkit-background-size: cover;
+		 	-moz-background-size: cover;
+  			-o-background-size: cover;
+  			background-size: cover;
+
+		}
+		
+		section{
+			height: 620px;
+			padding: 100px 0 0 0;
+		}
+		footer{
+			background-color: #95c1f6;
+			margin: 30px 0px 0px 0px
+		}
+		#socialicons {
+    			text-align: center;
+			padding: 40px;
+		}
+		#socialicons .icon{
+
+    			border: 1px solid #CFCFCF;
+   		 	display: inline-block;
+    			font-size: 18px;
+    			width: 34px;
+    			height: 34px;
+    			line-height: 34px;
+    			text-align: center;
+    			vertical-align: middle;
+   			margin: 0 1px 2px;
+		}
+		/* changed  */
+		#socialicons .icon:hover{
+    			border: 1px solid #CFCFCF;
+			color: blue;
+		}
+
+
+		/* Full-width input fields */
+		input[type=text], input[type=password] {
+    			width: 100%;
+    			padding: 12px 20px;
+    			margin: 8px 0;
+    			display: inline-block;
+    			border: 1px solid #ccc;
+    			box-sizing: border-box;
+		}
+
+		section#experience grid_6 container_4{
+			background-color: #e5e5e6;
+		}
+
+		/*author note: changed*/
+		#portf{
+			color: red;
+    			position: relative;
+    			-webkit-animation-name: portfolio ;/* Safari 4.0 - 8.0 */
+    			-webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    			animation-name: portfolio ;
+    			animation-duration: 4s;
+			animation-iteration-count: infinite
+		}
+
+		/* Safari 4.0 - 8.0 */
+		@-webkit-keyframes portfolio {
+    			0%   {color:red;}
+    			25%  {color:yellow;}
+    			50%  {color:blue;}
+    			75%  {color:green;}
+    			100% {color:red;}
+		}
+
+		/* Standard syntax */
+		@keyframes portfolio {
+    			0%   {color:red; }
+    			25%  {color:yellow; }
+    			50%  {color:blue; }
+    			75%  {color:green; }
+    			100% {color:red; }
+		}
+		
+		/*Author note : changed ,first dropdown*/
+		/* Hide Dropdowns by Default */
+		header#navbar ul ul {
+			display: none;
+			position: absolute;
+			background-color: white; 
+		}
+	
+		/* Display Dropdowns on Hover */
+		header#navbar ul li:hover > ul {
+			display:inherit;
+		}
+	
+		/* Fisrt Tier Dropdown */
+		header#navbar ul ul li {
+			width:100px;
+			float:left; /* I want it in row only*/
+			display:list-item;
+			
+		}
+
+		</style>
+	</head>   
+	<body> 
+
+	
+	
+	<!-- navbar -->
+	<header class="grid_12" id="navbar">
+		<ul>
+			<li class="grid_7"> <a href="#" id="portf"> Portfolio [ Shekhar Prasad Rajak] </a></li>
+        		<li class="grid_2">  <a href="#education"> Education </a></li>
+ 
+        		<li class="grid_2"> <a href="#experience"> Experience </a></li>
+			<li class="grid_2"><a href="#">Blog</a>
+            			<!-- First Tier Drop Down -->
+            			<ul style="left: 50%; ">
+                			<li><a href="http://shekharrajak.github.io/gsoc_2016_posts/">SymPy Blog</a></li>
+                			<li><a href="http://shekharrajak.github.io/gsoc_2017_posts/">SciRuby Blog</a></li>
+                			<li><a href="http://s-hacker.info/">s-hacker.info</a></li>
+            			</ul>        
+            		</li>
+        		<li class="grid_2"> <a href="#contact"> Contact us </a></li>
+    		</ul>
+ 
+	</header>
+	
+	<main>
+	<!-- homepage -->
+	<section style="padding:0 0 0 0;">
+
+		<div class="cover">
+  			<div style="text-align: center; padding-top: 100px;color: white;">
+        			<h1> Welcome !<br><small>This site contains my portfolio</small></h1>
+				<a href="#education">Go down</a>
+      			</div>
+		</div>
+	</section>
+
+	<section class="container_12" id="education">
+			<h3> Education</h3>
+        		<div class="edu_col grid_4">
+          			<h4>Schooling</h4>
+          			<p> Netaji Subhash Chandra Bose Vidhyalaya</p>
+
+        		</div>
+
+		        <div class="edu_col grid_4">
+          			<h4>College & University</h4>
+          			<p>National Institute of Technology, Warangal</p>
+
+        		</div>		        
+			<div class="edu_col grid_4">
+          			<h4>Company</h4>
+          			<p>CGI, Banglore</p>
+
+        		</div>
+      	</section>
+
+	<!-- personal experience -->
+	<section class="container_12" id="experience">
+
+		<h3> Experience</h3>
+		<div class="grid_6" >
+  			<p> Programming languages, I learnt : </p>
+			<ul>
+				<li> C, C++ : Learnt during 1st and 2nd year</li>
+				<li>Java    : Learnt during 3rd year OOP  course</li>
+				<li>Python  : During 2016 summer </li>
+				<li>Ruby    : During  2017 summer </li>
+				<li>Web technologies - HTML,CSS, JS, Codeigniter(basics), Django(basics) : Learnt during college events</li>
+			</ul>
+		</div>
+
+		<div class="grid_6">
+			<b> Related Links </b>
+			<div class="container_4"> <a href="http://shekharrajak.github.io/gsoc_2016_posts/"> <abbr title="Google Summer of Code">GSoC 2016 Report</abbr></a></div>
+			<hr>
+			<!-- Authore note: changed-->
+			<div class="container_4"><a href="http://shekharrajak.github.io/gsoc_2017_posts/"><abbr title="Google Summer of Code">GSoC 2017 Report</abbr></a></div>
+			<hr>
+ 			<div class="container_4"><a href="http://s-hacker.info/"> My Personal website</a></div>
+			
+		</div>
+	</section>
+
+	</main>
+	<!-- Form that contains msg to you -->
+	<section class="container_12" id="contact">
+
+		<h3> Contact me</h3>
+			<form class="form_contact" action="#">
+  				<div class="container">
+    				<label><b>Name</b></label>
+    				<input type="text" placeholder="Enter name" name="name" required>
+
+    				<label><b>email</b></label>
+    				<input type="text" placeholder="Enter email" name="email" required>
+
+    				<label><b>Message</b></label>
+   				<input type="text" placeholder="Message for me :)" name="msg" required>
+    				<div class="clearfix">
+      					<button type="submit" >Send</button>
+    				</div>
+  				</div>
+			</form> 		
+
+	
+	<!-- all social links --> 
+	<footer class="container_12" >
+		<div id="socialicons">
+		<a class="icon" href="https://github.com/shekharrajak" title="Follow " target="_blank"><i class="fa fa-github"></i></a>
+		<a class="icon" href="https://twitter.com/shekharrajak" title="Follow with Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+		<a class="icon" href="#" title="Follow with Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+		<a class="icon" href="#" title="Follow with Instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+		<a class="icon" href="#" title="Follow with Google Plus" target="_blank"><i class="fa fa-google-plus"></i></a>
+		<a class="icon" href="#" title="Follow with RSS" target="_blank"><i class="fa fa-rss"></i></a>
+		<a class="icon" href="mailto:shekharrajak@live.com" title="Email Me" target="_blank"><i class="fa fa-envelope"></i></a>
+		<br><br>
+		<a class="icon" style="border-style: none;" href="#" title="Copyright" target="_blank"><i class="fa fa-copyright"></i></a> 
+			Shown by <a class="icon" style="border-style: none;" href="#" title="Love" target="_blank"><i class="fa fa-heart"></i></a> Shekhar
+		</div>
+	</footer>
+		
+	</section>
+	
+
+
+	</body>
+</html>
