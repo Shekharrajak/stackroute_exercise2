@@ -11,3 +11,7 @@ Solution :
 
 Demo :
 [https://shekharrajak.github.io/stackroute_exercise2/](https://shekharrajak.github.io/stackroute_exercise2/)
+
+Main repo for StackRoute assignment:
+
+[https://github.com/Shekharrajak/StackRoute](https://github.com/Shekharrajak/StackRoute)
