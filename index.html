@@ -1,17 +1,20 @@
 ﻿<!DOCTYPE html>
-<html>   
+<html>
 	<head>
-	  <meta charset="UTF-8">  
+	  <meta charset="UTF-8"> 
 		<meta http-equiv="x-ua-compatible" content="ie=edge">    
-		<meta name="description" content="StackRoute HTML-CSS Excercise 2">              
-		<meta name="viewport" content="width=device-width, initial-scale=1">      
-		<title>Shekhar Prasad Rajak</title>     	
+		<meta name="description" content="StackRoute HTML-CSS Excercise 2">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Shekhar Prasad Rajak" />
+		<title>Shekhar Prasad Rajak</title>
 		<!-- getting bootstrap -->
 		<link rel="stylesheet" href="css/960.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<!-- using google font -->
 		<!-- changed -->
 		<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+    <!-- icon for tab-->
+    <link rel="shortcut icon" href="img/spr.png">
 		<!-- custom css -->
 		<style>
 
@@ -19,9 +22,12 @@
 		body {
     			font-family: 'Lato';font-size: 18px;
 		}
-		h3{
+		section h3{
 			text-align: center;
-			padding-bottom: 50px;
+			padding-bottom: 20px;
+      text-decoration: underline;
+      font-weight: 1000;
+      font-size: 40px;
 		}
 		/* changed */
 		button{
@@ -38,11 +44,12 @@
 			width: 102%;
 			top: 0%;
 			left: -2%;
-			
-		}		
+      z-index: 100;
+
+		}
 		/* changed */
 		header#navbar ul {
-    			list-style: none;		
+    			list-style: none;
 		}
  		/* changed */
 		header#navbar ul li {
@@ -74,10 +81,10 @@
   			background-size: cover;
 
 		}
-		
+
 		section{
 			height: 620px;
-			padding: 100px 0 0 0;
+			padding: 50px 0 0 0;
 		}
 		footer{
 			background-color: #95c1f6;
@@ -148,54 +155,95 @@
     			75%  {color:green; }
     			100% {color:red; }
 		}
-		
+
 		/*Author note : changed ,first dropdown*/
 		/* Hide Dropdowns by Default */
 		header#navbar ul ul {
 			display: none;
 			position: absolute;
-			background-color: white; 
+			background-color: white;
 		}
-	
+
 		/* Display Dropdowns on Hover */
 		header#navbar ul li:hover > ul {
 			display:inherit;
 		}
-	
+
 		/* Fisrt Tier Dropdown */
 		header#navbar ul ul li {
 			width:100px;
 			float:left; /* I want it in row only*/
 			display:list-item;
-			
+
 		}
 
-		</style>
-	</head>   
-	<body> 
+    /* overlay in experience section*/
+    .overlay {
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      right: 0;
+      background-color: #008CBA;
+      overflow: hidden;
+      width: 100%;
+      height:0;
+      transition: .5s ease;
+      opacity: 0.8;
+    }
 
-	
-	
+    .overlay_container:hover .overlay {
+      bottom: 0;
+      height: 100%;
+    }
+
+    .text {
+      white-space: nowrap;
+      color: white;
+      font-size: 25px;
+      font-weight: 200;
+      position: absolute;
+      overflow: hidden;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      opacity: 1;
+    }
+    .overlay_container > img{
+        display: block;
+        width: inherit;
+        height: inherit;
+    }
+    .overlay_container{
+      position: relative;
+      width: 250px;
+      height: 200px;
+    }
+		</style>
+	</head>
+	<body>
+
 	<!-- navbar -->
 	<header class="grid_12" id="navbar">
 		<ul>
-			<li class="grid_7"> <a href="#" id="portf"> Portfolio [ Shekhar Prasad Rajak] </a></li>
-        		<li class="grid_2">  <a href="#education"> Education </a></li>
- 
-        		<li class="grid_2"> <a href="#experience"> Experience </a></li>
+			<li class="grid_7">
+        <a href="#" id="portf"> Portfolio [ Shekhar Prasad Rajak] </a>
+      </li>
+      <li class="grid_2"> <a href="#experience"> Experience </a></li>
+      <li class="grid_2">  <a href="#education"> Education </a></li>
 			<li class="grid_2"><a href="#">Blog</a>
             			<!-- First Tier Drop Down -->
-            			<ul style="left: 50%; ">
+            			<ul style="left: 40%; ">
                 			<li><a href="http://shekharrajak.github.io/gsoc_2016_posts/">SymPy Blog</a></li>
                 			<li><a href="http://shekharrajak.github.io/gsoc_2017_posts/">SciRuby Blog</a></li>
                 			<li><a href="http://s-hacker.info/">s-hacker.info</a></li>
-            			</ul>        
+            			</ul>
             		</li>
         		<li class="grid_2"> <a href="#contact"> Contact us </a></li>
     		</ul>
- 
+
 	</header>
-	
+
 	<main>
 	<!-- homepage -->
 	<section style="padding:0 0 0 0;">
@@ -203,35 +251,61 @@
 		<div class="cover">
   			<div style="text-align: center; padding-top: 100px;color: white;">
         			<h1> Welcome !<br><small>This site contains my portfolio</small></h1>
-				<a href="#education">Go down</a>
+				<a href="#experience">Go down</a>
       			</div>
 		</div>
 	</section>
 
-	<section class="container_12" id="education">
-			<h3> Education</h3>
-        		<div class="edu_col grid_4">
-          			<h4>Schooling</h4>
-          			<p> Netaji Subhash Chandra Bose Vidhyalaya</p>
+	<section class="container_12" id="experience">
+			<h3> Experience </h3>
+        <h4>Open Source Contribution:</h6>
+        <div class="container_12">
+          <div class="grid_4 ">
+              <div class="overlay_container">
+                <img src="img/daru.png" alt="SciRuby" class="image">
+                <a href="https://github.com/sciruby/daru">
+                  <div class="overlay">
+                    <div class="text">SciRuby/Daru</div>
+                  </div>
+                </a>
+              </div>
+                <h4><a href="http://shekharrajak.github.io/gsoc_2016_posts/"> <abbr title="Google Summer of Code">GSoC 2016 Report</abbr></a></h4>
+            </div>
 
-        		</div>
+            <div class="grid_4 overlay_container">
+              <div class="overlay_container">
+                  <img src="img/sympy.png" alt="SymPy" class="image">
+                  <a href="https://github.com/sympy/sympy">
+                  <div class="overlay">
+                    <div class="text">SymPy</div>
+                  </div>
+                  </a>
+              </div>
 
-		        <div class="edu_col grid_4">
-          			<h4>College & University</h4>
-          			<p>National Institute of Technology, Warangal</p>
+                <h4>
+                  <a href="http://shekharrajak.github.io/gsoc_2017_posts/"><abbr title="Google Summer of Code">
+                    GSoC 2017 Report</abbr></a>
+                </h4>
 
-        		</div>		        
-			<div class="edu_col grid_4">
-          			<h4>Company</h4>
-          			<p>CGI, Banglore</p>
-
-        		</div>
+            </div>
+           <div class="grid_4 overlay_container">
+              <div class="overlay_container">
+                  <img src="img/bundler.png" alt="bundler" class="image">
+                  <a href="https://github.com/bundler/bundler">
+                  <div class="overlay">
+                    <div class="text">Bundler</div>
+                  </div>
+                  </a>
+              </div>
+          </div>
+        </div>
+        <p style="text-align: center;">My all the projects & work present in github : <a href="https://github.com/shekharrajak">@shekharrajak</a></p>
       	</section>
 
 	<!-- personal experience -->
-	<section class="container_12" id="experience">
+	<section class="container_12" id="education">
 
-		<h3> Experience</h3>
+		<h3> Education</h3>
 		<div class="grid_6" >
   			<p> Programming languages, I learnt : </p>
 			<ul>
@@ -241,17 +315,27 @@
 				<li>Ruby    : During  2017 summer </li>
 				<li>Web technologies - HTML,CSS, JS, Codeigniter(basics), Django(basics) : Learnt during college events</li>
 			</ul>
+      <p>
+        More details:
+        <a href="http://s-hacker.info/"> My Personal website</a>
+      </p>
 		</div>
 
 		<div class="grid_6">
-			<b> Related Links </b>
-			<div class="container_4"> <a href="http://shekharrajak.github.io/gsoc_2016_posts/"> <abbr title="Google Summer of Code">GSoC 2016 Report</abbr></a></div>
+			<b style="text-decoration: underline;"> Career</b><br><br>
+			<div class="container_4">
+      <strong>Schooling: </strong><br>
+      Netaji Subhash Chandra Bose Vidhyalaya</div>
 			<hr>
-			<!-- Authore note: changed-->
-			<div class="container_4"><a href="http://shekharrajak.github.io/gsoc_2017_posts/"><abbr title="Google Summer of Code">GSoC 2017 Report</abbr></a></div>
+			<div class="container_4">
+        <strong>College & University</strong><br>
+        National Institute of Technology, Warangal
+      </div>
 			<hr>
- 			<div class="container_4"><a href="http://s-hacker.info/"> My Personal website</a></div>
-			
+ 			<div class="container_4">
+      <strong>Joined CGI</strong> <br>CGI, Banglore
+      </div>
+
 		</div>
 	</section>
 
@@ -274,10 +358,10 @@
       					<button type="submit" >Send</button>
     				</div>
   				</div>
-			</form> 		
+			</form>
 
-	
-	<!-- all social links --> 
+
+	<!-- all social links -->
 	<footer class="container_12" >
 		<div id="socialicons">
 		<a class="icon" href="https://github.com/shekharrajak" title="Follow " target="_blank"><i class="fa fa-github"></i></a>
@@ -288,13 +372,13 @@
 		<a class="icon" href="#" title="Follow with RSS" target="_blank"><i class="fa fa-rss"></i></a>
 		<a class="icon" href="mailto:shekharrajak@live.com" title="Email Me" target="_blank"><i class="fa fa-envelope"></i></a>
 		<br><br>
-		<a class="icon" style="border-style: none;" href="#" title="Copyright" target="_blank"><i class="fa fa-copyright"></i></a> 
+		<a class="icon" style="border-style: none;" href="#" title="Copyright" target="_blank"><i class="fa fa-copyright"></i></a>
 			Shown by <a class="icon" style="border-style: none;" href="#" title="Love" target="_blank"><i class="fa fa-heart"></i></a> Shekhar
 		</div>
 	</footer>
-		
+
 	</section>
-	
+
 
 
 	</body>

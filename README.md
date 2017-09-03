@@ -1,5 +1,7 @@
 # stackroute_exercise2
 
+Please check gh-pages branch. [master branch may be updated.]
+
 Exercise 2 :
 [http://cgi-lms.stackroute.in/mod/assign/view.php?id=172](http://cgi-lms.stackroute.in/mod/assign/view.php?id=172)
 
