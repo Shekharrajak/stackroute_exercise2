@@ -1,207 +1,395 @@
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="StackRoute HTML-CSS Excercise 2">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Shekhar Prasad Rajak</title>
-    <!-- getting bootstrap -->
-    <link rel="stylesheet" href="css/960.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- using google font -->
-    <link href='https://fonts.googleapis.com/css?family=Dorsa' rel='stylesheet'>
-    <!-- custom css -->
-    <style>
+	<head>
+	  <meta charset="UTF-8"> 
+		<meta http-equiv="x-ua-compatible" content="ie=edge">    
+		<meta name="description" content="StackRoute HTML-CSS Excercise 2">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Shekhar Prasad Rajak" />
+		<title>Shekhar Prasad Rajak</title>
+		<!-- getting bootstrap -->
+		<link rel="stylesheet" href="css/960.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!-- using google font -->
+		<!-- changed -->
+		<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+    <!-- icon for tab-->
+    <link rel="shortcut icon" href="img/spr.png">
+		<!-- custom css -->
+		<style>
 
-    body {
-          font-family: 'Coda';font-size: 18px;
-    }
-    h3{
-      text-align: center;
-      padding-bottom: 50px;
-    }
-    header#navbar{
-      background-color: white;
-      position: fixed;
+		/* changed */
+		body {
+    			font-family: 'Lato';font-size: 18px;
+		}
+		section h3{
+			text-align: center;
+			padding-bottom: 20px;
+      text-decoration: underline;
+      font-weight: 1000;
+      font-size: 40px;
+		}
+		/* I want all button similar */
+		button{
+			dipslay: block;
+			width: 100px;
+			height: 40px;
+			background-color: #406CC4;
+      color: white;
+			paddding: 10px 10px 10px 10px;
+		}
+		header
+		{
+			background-color: white;
+			position: fixed;
+			width: 102%;
+			top: 0%;
+			left: -2%;
+      z-index: 100;
+
+		}
+		/* changed */
+		header#navbar ul {
+    			list-style: none;
+		}
+ 		/* changed */
+		header#navbar ul li {
+    			float: left;
+			display:inline-block;
+			 margin: 0 1.5em;
+		}
+
+		/* changed  */
+		header#navbar ul li a:hover {
+    			color: #4b6d98 ;
+		}
+		/* changed */
+		header#navbar ul li a{
+			display: block;
+     			padding: 8px 0px 8px 0px;
+    			background-color: #FFFF;
+		}
+
+		/* author note : changed */
+		.cover{
+			height: 100%; /*640px;*/
+			width: 100%;
+			overflow: hidden;
+			background: url("img/cover.jpg") no-repeat center center fixed;
+			-webkit-background-size: cover;
+		 	-moz-background-size: cover;
+  			-o-background-size: cover;
+  			background-size: cover;
+
+		}
+
+		section{
+			height: 620px;
+			padding: 50px 0 0 0;
+		}
+		footer{
+			background-color: #406CC4;
+			margin: 30px 0px 0px 0px
+		}
+		#socialicons {
+    			text-align: center;
+			     padding: 40px;
+		}
+		#socialicons .icon{
+          color: black;
+    			border: 1px solid #CFCFCF;
+   		 	display: inline-block;
+    			font-size: 18px;
+    			width: 34px;
+    			height: 34px;
+    			line-height: 34px;
+    			text-align: center;
+    			vertical-align: middle;
+   			margin: 0 1px 2px;
+		}
+		/* changed  */
+		#socialicons .icon:hover{
+    			border: 1px solid #CFCFCF;
+			     color: white;
+		}
+
+
+		/* Full-width input fields */
+		input[type=text], input[type=password] {
+    			width: 100%;
+    			padding: 12px 20px;
+    			margin: 8px 0;
+    			display: inline-block;
+    			border: 1px solid #ccc;
+    			box-sizing: border-box;
+		}
+
+		section#experience grid_6 container_4{
+			background-color: #e5e5e6;
+		}
+
+		/*author note: changed*/
+		#portf{
+			color: red;
+    			position: relative;
+    			-webkit-animation-name: portfolio ;/* Safari 4.0 - 8.0 */
+    			-webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    			animation-name: portfolio ;
+    			animation-duration: 4s;
+			animation-iteration-count: infinite
+		}
+
+		/* Safari 4.0 - 8.0 */
+		@-webkit-keyframes portfolio {
+    			0%   {color:red;}
+    			25%  {color:yellow;}
+    			50%  {color:blue;}
+    			75%  {color:green;}
+    			100% {color:red;}
+		}
+
+		/* Standard syntax */
+		@keyframes portfolio {
+    			0%   {color:red; }
+    			25%  {color:yellow; }
+    			50%  {color:blue; }
+    			75%  {color:green; }
+    			100% {color:red; }
+		}
+
+		/*Author note : changed ,first dropdown*/
+		/* Hide Dropdowns by Default */
+		header#navbar ul ul {
+			display: none;
+			position: absolute;
+			background-color: white;
+		}
+
+		/* Display Dropdowns on Hover */
+		header#navbar ul li:hover > ul {
+			display:inherit;
+		}
+
+		/* Fisrt Tier Dropdown */
+		header#navbar ul ul li {
+			width:100px;
+			float:left; /* I want it in row only*/
+			display:list-item;
+
+		}
+
+    /* overlay in experience section*/
+    .overlay {
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      right: 0;
+      background-color: #008CBA;
+      overflow: hidden;
       width: 100%;
-      padding: 0px 10px 10px 10px;
-      top: 0%;
+      height:0;
+      transition: .5s ease;
+      opacity: 0.8;
     }
 
-    header#navbar ul {
-          list-style: none;
-          display: block;
-          margin: 10px 10px;
-
-
-
+    .overlay_container:hover .overlay {
+      bottom: 0;
+      height: 100%;
     }
 
-    header#navbar ul li {
-          float: left;
-          margin: 0 1.5em;
+    .text {
+      white-space: nowrap;
+      color: white;
+      font-size: 25px;
+      font-weight: 200;
+      position: absolute;
+      overflow: hidden;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      opacity: 1;
     }
-
-    header#navbar ul li a:hover {
-          color: red;
+    .overlay_container > img{
+        display: block;
+        width: inherit;
+        height: inherit;
     }
-
-    .cover{
-      height: 640px;
-      padding: 50px;
-
+    .overlay_container{
+      position: relative;
+      width: 250px;
+      height: 200px;
     }
-
-    section{
-      height: 640px;
-      padding: 100px 0 0 0;
+    /* cover h1 text 3d effect*/
+    .cover h1{
+      font-size: 50px;
+      text-shadow: grey 3px 2px;
+      /*text-shadow: 0 0 5px rgba(0,0,0,0.5);*/
+      color: white;
     }
-    footer{
-      background-color: ;
-    }
-    #socialicons {
-          text-align: center;
-      padding: 40px;
-    }
-    #socialicons .icon{
+		</style>
+	</head>
+	<body>
 
-          border: 1px solid #CFCFCF;
-        display: inline-block;
-          font-size: 18px;
-          width: 34px;
-          height: 34px;
-          line-height: 34px;
-          text-align: center;
-          vertical-align: middle;
-        margin: 0 1px 8px;
-    }
-    #socialicons .icon:hover{
-          border: 1px solid #CFCFCF;
-    }
+	<!-- navbar -->
+	<header class="grid_12" id="navbar">
+		<ul>
+			<li class="grid_7">
+        <a href="#" id="portf"> Portfolio [ Shekhar Prasad Rajak] </a>
+      </li>
+      <li class="grid_2"> <a href="#experience"> Experience </a></li>
+      <li class="grid_2">  <a href="#education"> Education </a></li>
+			<li class="grid_2"><a href="#">Blog</a>
+            			<!-- First Tier Drop Down -->
+            			<ul style="left: 40%; ">
+                			<li><a href="http://shekharrajak.github.io/gsoc_2016_posts/">SymPy Blog</a></li>
+                			<li><a href="http://shekharrajak.github.io/gsoc_2017_posts/">SciRuby Blog</a></li>
+                			<li><a href="http://s-hacker.info/">s-hacker.info</a></li>
+            			</ul>
+            		</li>
+        		<li class="grid_2"> <a href="#contact"> Contact us </a></li>
+            <li class="grid_2"> <a href="https://github.com/Shekharrajak/stackroute_exercise2"> Source Code </a></li>
+    		</ul>
 
+	</header>
 
-    /* Full-width input fields */
-    input[type=text], input[type=password] {
-          width: 100%;
-          padding: 12px 20px;
-          margin: 8px 0;
-          display: inline-block;
-          border: 1px solid #ccc;
-          box-sizing: border-box;
-    }
+	<main>
+	<!-- homepage -->
+	<section style="padding:0 0 0 0;">
 
-    section#experience grid_6 container_4{
-      background-color: #e5e5e6;
-    }
-    </style>
-  </head>
-  <body>
+		<div class="cover">
+  			<div style="text-align: center; padding-top: 100px;color: white;">
+          <img src="img/">
+        			<h1> Welcome !<br><small>This site contains my portfolio</small></h1>
+				<a style="color: white;" href="#experience">Go down</a>
+      			</div>
+		</div>
+	</section>
 
-
-  <!-- navbar -->
-  <header class="grid_12" id="navbar">
-    <ul>
-      <li class="grid_7" style="padding-right: 0%;"> <a href="#"> Portfolio [ Shekhar Prasad Rajak] </a></li>
-            <li>  <a href="#education"> Education </a></li>
-
-            <li> <a href="#experience"> Experience </a></li>
-            <li> <a href="#contact"> Contact us </a></li>
-        </ul>
-
-  </header>
-  <!-- homepage -->
-  <section style="background-color:white;">
-
-    <div class="cover">
-        <div class="page-header" style="text-align: center;">
-              <h1> Welcome !<br><small>This site contains my portfolio</small></h1>
-        <a href="#education">Go down</a>
-            </div>
-    </div>
-  </section>
-
-  <section class="container_12" id="education">
-      <h3> Education</h3>
-            <div class="grid_4">
-                <h4>Schooling</h4>
-                <p> Netaji Subhash Chandra Bose Vidhyalaya</p>
-
+	<section class="container_12" id="experience">
+			<h3> Experience </h3>
+        <h4>Open Source Contribution:</h6>
+        <div class="container_12">
+          <div class="grid_4 ">
+              <div class="overlay_container">
+                <img src="img/daru.png" alt="SciRuby" class="image">
+                <a href="https://github.com/sciruby/daru">
+                  <div class="overlay">
+                    <div class="text">SciRuby/Daru</div>
+                  </div>
+                </a>
+              </div>
+                <h4><a href="http://shekharrajak.github.io/gsoc_2016_posts/"> <abbr title="Google Summer of Code">GSoC 2016 Report</abbr></a></h4>
             </div>
 
-            <div class="grid_4">
-                <h4>College & University</h4>
-                <p>National Institute of Technology, Warangal</p>
+            <div class="grid_4 overlay_container">
+              <div class="overlay_container">
+                  <img src="img/sympy.png" alt="SymPy" class="image">
+                  <a href="https://github.com/sympy/sympy">
+                  <div class="overlay">
+                    <div class="text">SymPy</div>
+                  </div>
+                  </a>
+              </div>
+
+                <h4>
+                  <a href="http://shekharrajak.github.io/gsoc_2017_posts/"><abbr title="Google Summer of Code">
+                    GSoC 2017 Report</abbr></a>
+                </h4>
 
             </div>
-      <div class="grid_4">
-                <h4>Company</h4>
-                <p>CGI, Banglore</p>
+           <div class="grid_4 overlay_container">
+              <div class="overlay_container">
+                  <img src="img/bundler.png" alt="bundler" class="image">
+                  <a href="https://github.com/bundler/bundler">
+                  <div class="overlay">
+                    <div class="text">Bundler</div>
+                  </div>
+                  </a>
+              </div>
+          </div>
+        </div>
+        <p style="text-align: center;">My all the projects & work present in github : <a href="https://github.com/shekharrajak">@shekharrajak</a></p>
+      	</section>
 
-            </div>
-        </section>
+	<!-- personal experience -->
+	<section class="container_12" id="education">
 
-  <!-- personal experience -->
-  <section class="container_12" id="experience">
+		<h3> Education</h3>
+		<div class="grid_6" >
+  			<p> Programming languages, I learnt : </p>
+			<ul>
+				<li> C, C++ : Learnt during 1st and 2nd year</li>
+				<li>Java    : Learnt during 3rd year OOP  course</li>
+				<li>Python  : During 2016 summer </li>
+				<li>Ruby    : During  2017 summer </li>
+				<li>Web technologies - HTML,CSS, JS, Codeigniter(basics), Django(basics) : Learnt during college events</li>
+			</ul>
+      <p>
+        More details:
+        <a href="http://s-hacker.info/"> My Personal website</a>
+      </p>
+		</div>
 
-    <h3> Experience</h3>
-    <div class="grid_6" >
-        <p> Programming languages, I learnt : </p>
-      <ul>
-        <li> C, C++ : Learnt during 1st and 2nd year</li>
-        <li>Java    : Learnt during 3rd year OOP  course</li>
-        <li>Python  : During 2016 summer </li>
-        <li>Ruby    : During  2017 summer </li>
-        <li>Web technologies - HTML,CSS, JS, Codeigniter(basics), Django(basics) : Learnt during college events</li>
-      </ul>
-    </div>
+		<div class="grid_6">
+			<b style="text-decoration: underline;"> Career</b><br><br>
+			<div class="container_4">
+      <strong>Schooling: </strong><br>
+      Netaji Subhash Chandra Bose Vidhyalaya</div>
+			<hr>
+			<div class="container_4">
+        <strong>College & University</strong><br>
+        National Institute of Technology, Warangal
+      </div>
+			<hr>
+ 			<div class="container_4">
+      <strong>Joined CGI</strong> <br>CGI, Banglore
+      </div>
 
-    <div class="grid_6">
-      <b> Related Links </b>
-      <div class="container_4"> <a href="http://shekharrajak.github.io/gsoc_2016_posts/"> GSoC 2016 Report</a></div>
-      <hr>
-      <div class="container_4"><a href="http://shekharrajak.github.io/gsoc_2017_posts/"> GSoC 2017 Report</a></div>
-      <hr>
-      <div class="container_4"><a href="http://s-hacker.info/"> My Personal website</a></div>
+		</div>
+	</section>
 
-    </div>
-  </section>
+	</main>
+	<!-- Form that contains msg to you -->
+	<section class="container_12" id="contact">
 
-  <!-- Form that contains msg to you -->
-  <section class="container_12" id="contact">
+		<h3> Contact me</h3>
+			<form class="form_contact" action="#">
+  				<div class="container">
+    				<label><b>Name</b></label>
+    				<input type="text" placeholder="Enter name" name="name" required>
 
-    <h3> Contact me</h3>
-<form class="form_contact" action="#">
-  <div class="container">
-    <label><b>Name</b></label>
-    <input type="text" placeholder="Enter name" name="name" required>
+    				<label><b>email</b></label>
+    				<input type="text" placeholder="Enter email" name="email" required>
 
-    <label><b>email</b></label>
-    <input type="text" placeholder="Enter email" name="email" required>
-
-    <label><b>Message</b></label>
-   <input type="text" placeholder="Message for me :)" name="msg" required>
-    <div class="clearfix">
-      <button type="submit" >Send</button>
-    </div>
-  </div>
-</form>
-
-  <footer class="container_12" id="socialicons">
-    <a class="icon" href="https://twitter.com/shekharrajak" title="Follow with Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
-    <a class="icon" href="#" title="Follow with Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
-    <a class="icon" href="#" title="Follow with Instagram" target="_blank"><i class="fa fa-instagram"></i></a>
-    <a class="icon" href="#" title="Follow with Google Plus" target="_blank"><i class="fa fa-google-plus"></i></a>
-    <a class="icon" href="https://github.com/shekharrajak" title="Follow with Bloglovin" target="_blank"><i class="fa fa-github"></i></a>
-    <a class="icon" href="LINK" title="Follow with RSS" target="_blank"><i class="fa fa-rss"></i></a>
-    <a class="icon" href="mailto:shekharrajak@live.com" title="Email Me" target="_blank"><i class="fa fa-envelope"></i></a>
-
-  </footer>
-
-</section>
+    				<label><b>Message</b></label>
+   				<input type="text" placeholder="Message for me :)" name="msg" required>
+    				<div class="clearfix">
+      					<button type="submit" >Send</button>
+    				</div>
+  				</div>
+			</form>
 
 
+	<!-- all social links -->
+	<footer class="container_12" >
+		<div id="socialicons">
+		<a class="icon" href="https://github.com/shekharrajak" title="Follow " target="_blank"><i class="fa fa-github"></i></a>
+		<a class="icon" href="https://twitter.com/shekharrajak" title="Follow with Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+		<a class="icon" href="#" title="Follow with Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+		<a class="icon" href="#" title="Follow with Instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+		<a class="icon" href="#" title="Follow with Google Plus" target="_blank"><i class="fa fa-google-plus"></i></a>
+		<a class="icon" href="#" title="Follow with RSS" target="_blank"><i class="fa fa-rss"></i></a>
+		<a class="icon" href="mailto:shekharrajak@live.com" title="Email Me" target="_blank"><i class="fa fa-envelope"></i></a>
+		<br><br>
+		<a class="icon" style="border-style: none;" href="#" title="Copyright" target="_blank"><i class="fa fa-copyright"></i></a>
+			Shown by <a class="icon" style="border-style: none;" href="#" title="Love" target="_blank"><i class="fa fa-heart"></i></a> Shekhar
+		</div>
+	</footer>
 
-  </body>
+	</section>
+
+
+
+	</body>
 </html>
